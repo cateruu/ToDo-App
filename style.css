@@ -1,0 +1,50 @@
+@import url('index.css');
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background-color: var(--background);
+  position: absolute;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: var(--background);
+  border-top: 1px solid var(--grey-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo {
+  width: 60%;
+}
+
+#todo input[type='text'] {
+  width: calc(95% - 40px);
+  height: 30px;
+  border: 1px solid var(--grey-border);
+  border-radius: 7px;
+  padding: 0 10px;
+}
+
+#todo input[type='submit'] {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--grey-border);
+  color: var(--text-color);
+  font-size: 15px;
+  background: transparent;
+  cursor: pointer;
+}
