@@ -4,22 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Paweł Kromołowski">
+  <meta name="keywords" content="to do app, to do">
+  <meta name="description" content="Basic to do app">
 
   <title>ToDo App</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <main>
     <div id="sections-wrapper">
-      <section id="new">
-        <h2>New</h2>
+      <section id="activities">
+        <h2>Activities</h2>
+        <div class="activity">
+          <span class="time">
+            2022-05-17 13:46
+          </span>
+          <span>
+            siema nie witajcie witajcie gdzie na hardcorze :D 
+          </span>
+          <div class="buttons">
+            <button>
+              <img src="./images/done.png" alt="done" title="done" height="25px">
+            </button>
+            <button>
+              <img src="./images/delete.png" alt="delete" title="delete" height="25px">
+            </button>
+          </div>
+        </div>
       </section>
-      <section id="important">
-        <h2>Important</h2>
+      <section id="priority">
+        <h2>High Priority</h2>
       </section>
-      <section id="rest">
-        <h2>Not so important</h2>
+      <section id="done">
+        <h2>Done</h2>
       </section>
     </div>
   </main>

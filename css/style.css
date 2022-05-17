@@ -1,4 +1,4 @@
-@import url('index.css');
+@import url('variables.css');
 
 body,
 html {
@@ -73,18 +73,61 @@ footer {
   padding: 1em;
   display: grid;
   gap: 1em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 500px 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 #sections-wrapper section {
   background-color: var(--background-secondery);
   border-radius: 10px;
-  box-shadow: 0 0 15px #cccccc;
+  box-shadow: 0 0 15px var(--border);
   padding: 20px;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#new {
+#sections-wrapper section h2 {
+  margin-top: 0;
+  width: 100%;
+}
+
+#activities {
   grid-row: span 2 / auto;
+}
+
+.activity {
+  width: 100%;
+  min-height: 40px;
+  padding: 5px;
+  background-color: var(--background);
+  box-shadow: 0 0 10px var(--border);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.time {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 8px;
+  color: var(--text-color-light);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
