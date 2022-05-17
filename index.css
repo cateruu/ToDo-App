@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@100&display=swap');
+
 :root {
-  --background: #292c31;
-  --background-secondery: #41454c;
-  --grey-border: #696e79;
-  --text-color: #e2e3e7;
+  --background: #CFE8EF;
+  --background-secondery: #C6DBF0;
+  --border: #AED1E6;
+  --border-darker: #93c5e4;
+  --text-color: #292f30;
 }
