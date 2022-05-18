@@ -86,6 +86,16 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+}
+
+#sections-wrapper section::-webkit-scrollbar {
+  background-color: var(--background);
+  width: 7px;
+}
+
+#sections-wrapper section::-webkit-scrollbar-thumb {
+  background-color: var(--background-sidebar);
 }
 
 #sections-wrapper section h2 {
