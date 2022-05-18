@@ -103,6 +103,8 @@ footer {
   width: 100%;
 }
 
+/* Activity element */
+
 #activities {
   grid-row: span 2 / auto;
 }
