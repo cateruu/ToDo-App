@@ -87,6 +87,7 @@ footer {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  transition: all 0.2s;
 }
 
 #sections-wrapper section::-webkit-scrollbar {
