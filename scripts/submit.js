@@ -6,10 +6,16 @@ let activities = JSON.parse(localStorage.getItem('activities')) || [];
 console.log(activities);
 
 form.addEventListener('submit', () => {
+  let value = form.elements.activity.value;
+  if (value == '') {
+    alert('Invalid input!');
+    return;
+  } 
+
   let activity = {
     id: Date.now(),
     state: 'default',
-    value: form.elements.activity.value,
+    value: value,
   };
 
   activities.push(activity);
