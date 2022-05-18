@@ -8,6 +8,7 @@ console.log(activities);
 form.addEventListener('submit', () => {
   let activity = {
     id: Date.now(),
+    state: 'default',
     value: form.elements.activity.value,
   };
 
