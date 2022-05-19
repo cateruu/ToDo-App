@@ -61,6 +61,17 @@ document.onmousedown = (e) => {
   draggable.onmouseup = () => {
     document.removeEventListener('mousemove', onMouseMove);
 
+    // change activity state if changed
+    let tempStorage = [];
+    for (let activiy of JSON.parse(localStorage.getItem('activities'))) {
+      if (activiy.id == draggable.dataset.id) {
+        activiy.state = currentDroppable.dataset.state;
+      }
+
+      tempStorage.push(activiy);
+      localStorage.setItem('activities', JSON.stringify(tempStorage));
+    }
+    
     leaveDroppable(currentDroppable);
     currentDroppable.append(draggable);
     draggable.style = null;

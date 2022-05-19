@@ -9,6 +9,7 @@ let storage = JSON.parse(localStorage.getItem('activities')) || [];
 for (let activity of storage) {
   // create single activity
   let div = document.createElement('div');
+  div.setAttribute('data-id', activity.id);
   div.classList.add('activity', 'draggable');
   div.innerHTML = `<span>${activity.value}</span>`;
 
