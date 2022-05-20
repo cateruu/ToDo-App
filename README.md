@@ -8,5 +8,6 @@
  - Draggable elements
 
  CSS:
+ - Responsive design
  - Flexbox and grid
  - Variables

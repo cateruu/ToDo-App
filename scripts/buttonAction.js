@@ -5,7 +5,7 @@ document.onclick = (e) => {
   
   let titleAttribute = e.target.getAttribute('title');
   
-  if (titleAttribute != 'done' && titleAttribute != 'delete') return;
+  if (titleAttribute != 'done' && titleAttribute != 'delete' && titleAttribute != 'upgrade') return;
 
   let activityElement = e.target.closest('div.activity');
   let elementId = activityElement.dataset.id;
@@ -47,5 +47,29 @@ document.onclick = (e) => {
     let doneContainer = document.getElementById('done');
     doneContainer.append(activityElement);
     activityElement.classList.add('highlight');
+    return;
+  }
+
+  // move to high priority
+  if (titleAttribute == 'upgrade') {
+
+    // update localStorage
+    let tempStorage = [];
+    for (let activity of JSON.parse(localStorage.getItem('activities'))) {
+      if (activity.id == elementId) {
+        activity.state = 'important';
+      }
+
+      tempStorage.push(activity);
+    }
+
+    localStorage.setItem('activities', JSON.stringify(tempStorage));
+    activityElement.remove();
+    
+    // move activity to done container
+    let doneContainer = document.getElementById('important');
+    doneContainer.append(activityElement);
+    activityElement.classList.remove('highlight');
+    return
   }
 }

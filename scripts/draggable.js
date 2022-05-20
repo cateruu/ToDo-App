@@ -3,9 +3,9 @@
 let currentDroppable = null;
 
 document.onmousedown = (e) => {
-  if (!e.target.classList.contains('draggable')) return;
+  if (!e.target.classList.contains('draggable') && !e.target.closest('div.draggable .text')) return;
   
-  let draggable = e.target;
+  let draggable = e.target.closest('div.draggable');
   
   let coords = draggable.getBoundingClientRect();
   

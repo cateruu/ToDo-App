@@ -81,7 +81,7 @@ footer {
   padding: 1rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: 1fr 500px;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -120,7 +120,7 @@ footer {
 
 .activity {
   width: 100%;
-  min-height: 40px;
+  /* min-height: 40px; */
   padding: 5px;
   background-color: var(--background);
   box-shadow: 0 0 10px var(--border);
@@ -131,6 +131,10 @@ footer {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.activity .text {
+  padding: 10px 0;
 }
 
 .time {
@@ -165,6 +169,7 @@ footer {
 #done {
   position: relative;
 }
+
 #clear {
   position: absolute;
   top: 20px;
@@ -182,4 +187,20 @@ footer {
 
 #clear:hover {
   background-color: var(--background-secondery);
+}
+
+@media screen and (max-width: 1050px){
+  #sections-wrapper {
+    height: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  #activities {
+    grid-row: 1;
+  }
+
+  #todo {
+    width: 90%;
+  }
 }
