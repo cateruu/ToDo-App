@@ -11,7 +11,7 @@ html {
 main {
   width: 100vw;
   height: calc(100vh - 50px);
-  background-color: var(--background);
+  background-color: white;
   position: absolute;
   display: flex;
   justify-content: center;

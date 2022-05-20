@@ -61,7 +61,7 @@ document.onmousedown = (e) => {
   draggable.onmouseup = () => {
     document.removeEventListener('mousemove', onMouseMove);
 
-    // change activity state if changed
+    // change activity state
     let tempStorage = [];
     for (let activiy of JSON.parse(localStorage.getItem('activities'))) {
       if (activiy.id == draggable.dataset.id) {
@@ -90,4 +90,3 @@ function enterDroppable(droppable) {
 }
 
 document.ondragstart = () => false;
-document.ondblclick = () => false;
