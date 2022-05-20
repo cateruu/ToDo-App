@@ -51,7 +51,7 @@ document.onmousedown = (e) => {
       } 
 
       if (currentDroppable) {
-        enterDroppable(currentDroppable);
+        enterDroppable(currentDroppable, draggable);
       }
     }
   }
@@ -85,8 +85,14 @@ function leaveDroppable(droppable) {
   droppable.classList.remove('highlight');
 }
 
-function enterDroppable(droppable) {
+function enterDroppable(droppable, draggable) {
   droppable.classList.add('highlight');
+
+  if (droppable.dataset.state == 'done') {
+    draggable.classList.add('highlight');
+  } else {
+    draggable.classList.remove('highlight');
+  }
 }
 
 document.ondragstart = () => false;

@@ -45,6 +45,7 @@ function createActivity(activity, container) {
       break;
     case 'done':
       doneContainer.append(container);
+      container.classList.add('highlight');
       break;
     default:
       console.log(new Error(`Wrong state in activity id: "${activity.id}"!`));
